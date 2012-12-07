@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>COW Proxy by cyfdecyf</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">COW Proxy</h1>
+        <p class="header">Climb Over the Wall</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/cyfdecyf/cow/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/cyfdecyf/cow/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/cyfdecyf/cow">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/cyfdecyf">cyfdecyf</a></p>
+
+
+      </header>
+      <section>
+        <p>COW is a HTTP proxy that tries to <strong>automatically identify blocked websites and use a parent proxy when visiting those sites</strong>. For directly accessible sites, COW will use direct access.</p>
+
+<h1>Features</h1>
+
+<ul>
+<li><strong>Automatically identify blocked websites</strong></li>
+<li><strong>Record which sites are blocked, which can be directly accessed</strong></li>
+<li><strong>Generate and serve PAC file</strong></li>
+<li><strong>Convert socks proxy to HTTP proxy</strong></li>
+</ul><h1>Installation</h1>
+
+<p>For OS X and Linux, run the following command to install pre-compiled binary (curl is required, along with trust):</p>
+
+<pre><code>curl -s -L https://github.com/cyfdecyf/cow/raw/master/install-cow.sh | bash
+</code></pre>
+
+<p>Re-run the above command to update COW.</p>
+
+<p>Experimental windows binary is also provided, look at the <a href="https://github.com/cyfdecyf/cow/downloads">downloads page</a>.</p>
+
+<h2>From source</h2>
+
+<p>Install <a href="http://golang.org/doc/install">go</a>, set <code>$GOPATH</code>. Then run</p>
+
+<pre><code>go get github.com/cyfdecyf/cow
+</code></pre>
+
+<p>Use <code>go get -u github.com/cyfdecyf/cow</code> to update COW.</p>
+
+<h1>Usage</h1>
+
+<p>Configuration file is located at <code>~/.cow/rc</code>. Here's a <a href="https://github.com/cyfdecyf/cow/blob/master/doc/sample-config/rc">sample config</a> with comments for each option.</p>
+
+<p>To start cow, just execute <code>cow</code> on the command line.</p>
+
+<ul>
+<li>The PAC file can be accessed at <code>http://&lt;proxy listen address&gt;/pac</code>
+</li>
+<li>Command line options can override options in the configuration file
+
+<ul>
+<li>For more details, see the output of <code>cow -h</code>
+</li>
+</ul>
+</li>
+</ul><h1>Limitations</h1>
+
+<ul>
+<li>Designed to run on your own computer
+
+<ul>
+<li>COW can serve multiple users, but no authentication is provided now</li>
+</ul>
+</li>
+<li>No caching, COW just passes traffic between clients and web servers
+
+<ul>
+<li>For web browsing, browsers have their own cache</li>
+</ul>
+</li>
+<li>Blocked site detection is not always reliable</li>
+<li>Beta quality now
+
+<ul>
+<li>Stable enough for myself. I'm using COW as system wide proxy on OS X 10.8 everyday</li>
+<li><strong>Issue reporting is welcomed</strong></li>
+</ul>
+</li>
+</ul><h1>Misc</h1>
+
+<p>For more information, take a look at <a href="https://github.com/cyfdecyf/cow#readme">README</a>.</p>
+
+<p>Contact: Twitter <a href="https://twitter.com/cyfdecyf">@cyfdecyf</a></p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
